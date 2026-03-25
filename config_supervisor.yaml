@@ -1,0 +1,31 @@
+server:
+  endpoint: ws://192.168.15.13:4320/v1/opamp
+  tls:
+    insecure_skip_verify: true
+
+capabilities:
+  accepts_remote_config: true
+  reports_unmerged_effective_config: true
+  reports_effective_config: true
+  reports_own_metrics: true
+  reports_own_logs: true
+  reports_own_traces: false
+  reports_health: true
+  reports_remote_config: true
+
+agent:
+  executable: "C:\\Program Files\\OpenTelemetry Collector\\otelcol-contrib.exe"
+  persist_remote_config_path: "C:\\Program Files\\OpenTelemetry Collector\\config_teste.yaml"
+  
+  config_files:
+    - "C:\\Program Files\\OpenTelemetry Collector\\config_teste.yaml"
+
+storage:
+  directory: "C:\\Program Files\\OpenTelemetry Collector\\opamp"
+  
+telemetry:
+  metrics:
+    level: none
+  
+
+  
