@@ -25,3 +25,8 @@
     }
   }
 }
+
+
+oc rsh deploy/grafana
+# dentro do pod:
+curl -v -H "Authorization: Bearer $TOKEN" "$TENANT/platform/storage/query/v1/query:execute" -d '{"query":"fetch logs | limit 1"}' -H "Content-Type: application/json"
